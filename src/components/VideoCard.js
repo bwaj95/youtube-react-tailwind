@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { formatNumeral } from "../helpers/numeral";
+import { formatTimeAgo } from "../helpers/timeago";
 
 const VideoCard = (props) => {
   const { info } = props;
 
   const { snippet, statistics } = info;
 
-  const { channelTitle, title, thumbnails } = snippet;
+  const { channelTitle, title, thumbnails, publishedAt } = snippet;
   const { viewCount } = statistics;
 
   return (
@@ -45,7 +46,10 @@ const VideoCard = (props) => {
             </svg>
           </div>
         </div>
-        <li className="ml-8">{formatNumeral(viewCount)} views</li>
+        <li className="ml-8 flex gap-x-1">
+          <p>{formatNumeral(viewCount)} views</p>
+          <p>{formatTimeAgo(publishedAt)}</p>
+        </li>
       </ul>
     </div>
   );

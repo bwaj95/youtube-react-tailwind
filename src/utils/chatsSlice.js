@@ -15,8 +15,8 @@ const chatsSlice = createSlice({
         };
       }
 
-      if (state[videoId].messages.length > 25) state.messages.splice(25, 1);
-      state = state[videoId].messages.unshift(message);
+      if (state[videoId].messages?.length > 25) state.messages?.splice(25, 1);
+      state = state[videoId].messages?.unshift(message);
     },
   },
 

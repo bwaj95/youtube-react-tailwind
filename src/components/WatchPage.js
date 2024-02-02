@@ -23,19 +23,20 @@ const WatchPage = () => {
   }, []);
 
   return (
-    <div className=" w-full m-5 p-2">
-      <div className=" flex w-full ">
+    <div className=" w-[90%] flex mx-auto my-2 p-2 gap-x-4">
+      <div className=" w-[1300px] flex flex-col items-start  ">
         <iframe
-          width="1200px"
-          height="600px"
           src={`https://www.youtube.com/embed/${videoId}`}
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
+          className=" w-full h-fit aspect-video rounded-lg "
         ></iframe>
+        <CommentsContainer videoId={videoId} />
+      </div>
+      <div className="w-[23%]  ">
         <LiveChat videoId={videoId} />
       </div>
-      <CommentsContainer />
     </div>
   );
 };

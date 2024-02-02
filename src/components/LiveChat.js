@@ -43,7 +43,7 @@ const LiveChat = ({ videoId }) => {
   };
 
   return (
-    <div className=" w-[600px] h-[600px] ml-2 p-2 border border-black bg-slate-100 rounded-lg    ">
+    <div className=" w-full h-[600px] ml-2 p-2 border border-black bg-slate-100 rounded-lg mx-auto   ">
       <div className=" w-full h-[8%] font-bold ml-2 mb-2 py-2 shadow-sm ">
         Live Chat
       </div>
