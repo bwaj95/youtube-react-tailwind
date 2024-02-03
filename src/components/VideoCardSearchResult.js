@@ -6,14 +6,14 @@ const VideoCardSearchResult = ({ info }) => {
   const { title, description, channelTitle, thumbnails, publishedAt } = snippet;
 
   return (
-    <div className=" py-2 px-3 w-[80%]  mx-auto  flex gap-x-4 relative ">
+    <div className=" py-2 px-3 w-[95%] lg:w-[80%]  mx-auto  flex gap-x-4 relative ">
       <Link
         to={`/watch?v=${id.videoId}`}
         className=" absolute top-0 bottom-0 right-0 left-0 "
       ></Link>
 
       {/* Image */}
-      <div className="w-1/4 rounded-lg overflow-hidden">
+      <div className=" w-3/5  lg:w-1/4 rounded-lg overflow-hidden">
         <img
           src={thumbnails.medium.url}
           alt={title}
@@ -30,7 +30,13 @@ const VideoCardSearchResult = ({ info }) => {
 
         {/* Channel details */}
         <div className="flex gap-x-2 items-center my-1">
-          <div className=" w-6 h-6 rounded-full bg-gray-400 "></div>
+          <div className="w-6 h-6 rounded-full overflow-hidden">
+            <img
+              src="https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s176-c-k-c0x00ffffff-no-rj"
+              alt="channel logo"
+              className="w-full h-full"
+            />
+          </div>
           <div className=" text-sm  opacity-80 ">{channelTitle}</div>
           <div className="w-4 h-4 text-xs text-white flex items-center justify-center">
             <svg

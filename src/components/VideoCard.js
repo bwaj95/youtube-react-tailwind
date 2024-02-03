@@ -24,7 +24,13 @@ const VideoCard = (props) => {
       <ul>
         <li className=" flex items-start py-2 w-full h-14 overflow-hidden ">
           <div className="w-1/12 py-2 ">
-            <div className=" w-6 h-6 rounded-full bg-gray-400 "></div>
+            <div className="w-6 h-6 rounded-full overflow-hidden">
+              <img
+                src="https://yt3.googleusercontent.com/584JjRp5QMuKbyduM_2k5RlXFqHJtQ0qLIPZpwbUjMJmgzZngHcam5JMuZQxyzGMV5ljwJRl0Q=s176-c-k-c0x00ffffff-no-rj"
+                alt="channel logo"
+                className="w-full h-full"
+              />
+            </div>
           </div>
           <p className=" w-11/12 font-bold flex my-auto ">
             {title.substring(0, 60) + "..."}
@@ -46,9 +52,9 @@ const VideoCard = (props) => {
             </svg>
           </div>
         </div>
-        <li className="ml-8 flex gap-x-1">
-          <p>{formatNumeral(viewCount)} views</p>
-          <p>{formatTimeAgo(publishedAt)}</p>
+        <li className="ml-8 flex gap-x-2">
+          <p className="  ">{formatNumeral(viewCount)} views</p>
+          <p className=" font-light ">{formatTimeAgo(publishedAt)}</p>
         </li>
       </ul>
     </div>

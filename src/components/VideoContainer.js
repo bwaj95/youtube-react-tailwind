@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { YT_VIDEOS_API } from "../utils/constants";
 import VideoCard from "./VideoCard";
-import { Link } from "react-router-dom";
 
 const VideoContainer = () => {
   const [videos, setVideos] = useState([]);
@@ -25,6 +24,10 @@ const VideoContainer = () => {
       <p>Loading...</p>
     );
 
-  return <div className="grid grid-cols-5 gap-x-2 gap-y-3 px-2">{content}</div>;
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-2 gap-y-3 px-2">
+      {content}
+    </div>
+  );
 };
 export default VideoContainer;

@@ -117,7 +117,9 @@ const Comment = ({ data }) => {
           {/* Icon */}
           <div></div>
 
-          <div>{totalReplyCount > 0 && <p>{totalReplyCount} replies</p>}</div>
+          <div className=" text-blue-700 font-semibold ">
+            {totalReplyCount > 0 && <p>{totalReplyCount} replies</p>}
+          </div>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ const WatchPage = () => {
 
   return (
     <div className=" w-[90%] flex mx-auto my-2 p-2 gap-x-4">
-      <div className=" w-[1300px] flex flex-col items-start  ">
+      <div className="w-[90%] mx-auto xl:mx-0 xl:w-[1300px] flex flex-col items-start  ">
         <iframe
           src={`https://www.youtube.com/embed/${videoId}`}
           title="YouTube video player"
@@ -34,7 +34,7 @@ const WatchPage = () => {
         ></iframe>
         <CommentsContainer videoId={videoId} />
       </div>
-      <div className="w-[23%]  ">
+      <div className="hidden xl:block xl:w-[23%]  ">
         <LiveChat videoId={videoId} />
       </div>
     </div>

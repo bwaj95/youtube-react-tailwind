@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { YT_KEYWORD_SEARCH_API } from "../utils/constants";
-import VideoCard from "./VideoCard";
+
 import VideoCardSearchResult from "./VideoCardSearchResult";
 import Spinner from "./Spinner";
 
@@ -21,8 +21,8 @@ const SearchResultsContainer = () => {
 
       const data = await response.json();
 
-      console.log("Search query data..." + query);
-      console.log(data);
+      // console.log("Search query data..." + query);
+      // console.log(data);
 
       setVideos(data.items);
 
